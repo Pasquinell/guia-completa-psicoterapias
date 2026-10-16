@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psicoterapias: guía de teorías</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4ee;--fg:#22211e;--mut:#6a665c;--card:#fffdf9;--bd:#e4dfd3;--sh:0 8px 30px rgba(60,50,30,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16151a;--fg:#ecebe6;--mut:#a09d93;--card:#211f27;--bd:#35323d;--sh:0 8px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16151a;--fg:#ecebe6;--mut:#a09d93;--card:#211f27;--bd:#35323d;--sh:0 8px 30px rgba(0,0,0,.35);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.7 Inter,system-ui,sans-serif}
+.hero{min-height:88vh;display:grid;place-content:center;text-align:center;padding:12vh 22px;background:radial-gradient(900px 420px at 15% 10%,#7F77DD40,transparent),radial-gradient(800px 420px at 90% 30%,#D4537E35,transparent),radial-gradient(700px 420px at 50% 100%,#1D9E7538,transparent)}
+.hero h1{font:600 clamp(2.6rem,7vw,5.2rem)/1.02 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:.25em 0}
+.hero em{font-style:italic;background:linear-gradient(90deg,#7F77DD,#D4537E,#E0673A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:640px;margin:.6em auto;color:var(--mut)}
+.eye{font:600 12px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:1.4em}
+.chips span{border:1px solid var(--bd);background:var(--card);border-radius:20px;padding:4px 14px;font-size:13px;font-weight:500}
+.wrap{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:48px;max-width:1180px;margin:0 auto;padding:0 22px}
+aside{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;padding:18px 0;display:flex;flex-direction:column}
+.panel{flex:1;min-height:0;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--bd);border-radius:20px;box-shadow:var(--sh);padding:10px}
+.panel svg{flex:1;min-height:0;width:100%}
+#cap{font:500 13px/1.3 Inter,sans-serif;text-align:center;color:var(--mut);padding:4px 6px 2px;min-height:2.6em}
+.chh{margin:14vh 0 5vh}
+.num{font:italic 600 5rem/1 Fraunces,Georgia,serif;color:var(--c);opacity:.4}
+h2{font:600 clamp(1.9rem,4vw,2.7rem)/1.1 Fraunces,Georgia,serif;margin:.1em 0 .3em;letter-spacing:-.01em}
+.chh p{color:var(--mut);margin:0;max-width:520px}
+.cards{display:grid;gap:22px}
+.t{display:grid;grid-template-columns:auto 1fr;gap:18px;background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--c);border-radius:18px;padding:22px 24px;box-shadow:var(--sh);opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s,box-shadow .3s,border-color .3s}
+.t.seen{opacity:1;transform:none}
+.t.on{box-shadow:0 14px 44px color-mix(in srgb,var(--c) 30%,transparent);border-color:var(--c)}
+.y{font:italic 600 1.7rem/1 Fraunces,Georgia,serif;color:var(--c);min-width:3.4rem}
+h3{font:600 1.45rem/1.2 Fraunces,Georgia,serif;margin:0 0 .3em}
+.au{font-size:13.5px;font-weight:600;color:var(--c);margin-bottom:.5em}
+.t p{margin:0 0 .7em;font-size:16.5px}
+.wk{font-size:13px;color:var(--mut);font-style:italic}
+.tree{max-width:1180px;margin:16vh auto 10vh;padding:0 22px}
+.tree .box{overflow-x:auto;background:var(--card);border:1px solid var(--bd);border-radius:20px;box-shadow:var(--sh);padding:12px}
+.tree svg{min-width:900px;width:100%;height:auto;display:block}
+.tree text{fill:var(--fg);font:500 12.5px Inter,sans-serif;paint-order:stroke;stroke:var(--card);stroke-width:4px}
+.note{max-width:640px;font-size:14px;color:var(--mut);margin:1.2em 0 0}
+@media(max-width:800px){.wrap{grid-template-columns:1fr;gap:0}aside{height:40vh;background:var(--bg);z-index:5;padding:8px 0}.t{grid-template-columns:1fr;gap:6px;padding:18px}.chh{margin:9vh 0 4vh}}
+</style></head><body>
+<header class="hero"><div class="eye">Guía interactiva</div><h1>Las <em>psicoterapias</em>,<br>teoría por teoría</h1>
+<p>Un recorrido por 36 escuelas y modelos, de Freud a la tercera ola, con sus autores, obras y fechas. Al bajar, la línea de tiempo marca dónde estás; al final, un árbol muestra cómo se emparentan.</p>
+<div class="chips"><span>7 capítulos</span><span>36 teorías</span><span>1895 – 2006</span></div></header>
+<div class="wrap">
+<aside><div class="panel"><svg id="tl" viewBox="0 0 400 500" role="img" aria-label="Línea de tiempo de escuelas de psicoterapia"></svg><div id="cap"></div></div></aside>
+<main>
+<section style="--c:#7F77DD"><div class="chh"><div class="num">01</div><h2>Psicodinámica</h2><p>Del conflicto inconsciente a la relación como motor del cambio.</p></div><div class="cards" data-ch="1"></div></section>
+<section style="--c:#1D9E75"><div class="chh"><div class="num">02</div><h2>Conductual y cognitiva</h2><p>De lo observable al pensamiento: aprendizaje, creencias y conducta.</p></div><div class="cards" data-ch="2"></div></section>
+<section style="--c:#1D9E75"><div class="chh"><div class="num">03</div><h2>Tercera ola</h2><p>Aceptación, atención plena y regulación emocional. Etiqueta abierta, no lista oficial.</p></div><div class="cards" data-ch="3"></div></section>
+<section style="--c:#E0673A"><div class="chh"><div class="num">04</div><h2>Humanista y existencial</h2><p>La experiencia subjetiva, el sentido y la emoción como centro.</p></div><div class="cards" data-ch="4"></div></section>
+<section style="--c:#2F86D6"><div class="chh"><div class="num">05</div><h2>Sistémica y familiar</h2><p>El síntoma se entiende en el patrón de relaciones.</p></div><div class="cards" data-ch="5"></div></section>
+<section style="--c:#D4537E"><div class="chh"><div class="num">06</div><h2>Trauma y cuerpo</h2><p>Tratamientos específicos para el trauma y terapias corporales.</p></div><div class="cards" data-ch="6"></div></section>
+<section style="--c:#C08A1E"><div class="chh"><div class="num">07</div><h2>Otras e integración</h2><p>Vínculos, grupos, roles, partes internas y síntesis.</p></div><div class="cards" data-ch="7"></div></section>
+</main></div>
+<section class="tree"><div class="eye">Filogenia</div><h2>El árbol de las psicoterapias</h2><div class="box"><svg id="tr"></svg></div>
+<p class="note">Árbol simplificado: indica influencia y afinidad conceptual, no linaje estricto. Las escuelas se solapan, los autores cambian de posición y las técnicas circulan entre modelos. Popularidad no equivale a eficacia: la evidencia se evalúa por problema y población.</p></section>
+<script>
+const L=['Psicodin.','TCC','Human.','Sistém.','Trauma','Otras'],C=['#7F77DD','#1D9E75','#E0673A','#2F86D6','#D4537E','#C08A1E'];
+const CAP=['','Psicodinámica','Conductual y cognitiva','Tercera ola','Humanista y existencial','Sistémica y familiar','Trauma y cuerpo','Otras e integración'];
+const D=[
+[0,1,1900,'Psicoanálisis clásico','Sigmund Freud','Estudios sobre la histeria (1895); La interpretación de los sueños (1900); El yo y el ello (1923)','Freud propone que parte del sufrimiento nace de deseos y conflictos inconscientes que no se comprenden de forma directa. Síntomas, sueños y lapsus serían su expresión disfrazada. El método combina asociación libre, interpretación y análisis de la resistencia y la transferencia, es decir, de lo que se repite en la relación con el analista.'],
+[0,1,1912,'Adler y Jung','Alfred Adler (1911); Carl G. Jung (1913)','Adler, Understanding Human Nature (1927); Jung, Psychological Types (1921)','Ambos se separan de Freud. Adler acentúa el sentimiento de inferioridad, la compensación, las metas personales y la pertenencia social. Jung amplía el inconsciente con una dimensión colectiva poblada de arquetipos y entiende sueños y símbolos como parte de un proceso de individuación.'],
+[0,1,1932,'Relaciones objetales','Melanie Klein, Fairbairn, Winnicott, Balint; poskleinianos: Bion, Segal','Klein, The Psycho-Analysis of Children (1932); Winnicott, Playing and Reality (1971); Bion, Learning from Experience (1962)','Las primeras relaciones se internalizan y organizan el mundo emocional. Klein describe las posiciones esquizo-paranoide y depresiva, con fantasías inconscientes y defensas primitivas. Los poskleinianos profundizan en la identificación proyectiva y en la capacidad de procesar experiencias emocionales.'],
+[0,1,1936,'Psicología del Yo','Anna Freud, Heinz Hartmann, Kris, Loewenstein','A. Freud, The Ego and the Mechanisms of Defence (1936); Hartmann (1939)','Estudia las funciones del yo (defensa, adaptación) sin reducir todo el psiquismo al conflicto pulsional. Anna Freud sistematizó los mecanismos de defensa y Hartmann propuso que el yo tiene áreas libres de conflicto orientadas a adaptarse al entorno.'],
+[0,1,1953,'Interpersonal y relacional','H. S. Sullivan, Fromm; luego Mitchell, Aron, Benjamin, Stolorow','Sullivan, The Interpersonal Theory of Psychiatry (1953); Greenberg y Mitchell (1983)','Sullivan entiende la personalidad a partir de patrones interpersonales y del contexto cultural. Desde los años 80 el giro relacional propone que la experiencia y el proceso terapéutico se co-construyen entre dos subjetividades, y que la relación real importa junto con la transferencia.'],
+[0,1,1966,'Psicoanálisis lacaniano','Jacques Lacan','Écrits (1966); Seminario XI (1964, publicado en 1973)','Relee a Freud con la lingüística, la antropología y la filosofía. El inconsciente está estructurado como un lenguaje; el sujeto se constituye en relación con el Otro, el deseo y la falta, y su experiencia se ordena en tres registros: imaginario, simbólico y real. Es una tradición teórica y clínica con múltiples escuelas.'],
+[0,1,1971,'Psicología del self','Heinz Kohut','The Analysis of the Self (1971)','Kohut sostiene que el self se desarrolla gracias a la empatía y al reconocimiento de figuras significativas. Ciertas dificultades narcisistas se leen como fallas de ese proceso, y la clínica se apoya en la empatía sostenida del terapeuta.'],
+[0,1,1999,'MBT y TFP','Bateman y Fonagy; Otto Kernberg','Bateman y Fonagy (2004); Clarkin, Yeomans y Kernberg (1999)','Dos modelos contemporáneos para trastornos graves de personalidad. La terapia basada en la mentalización busca mejorar la capacidad de comprender estados mentales propios y ajenos. La terapia focalizada en la transferencia analiza el vínculo con el terapeuta para integrar representaciones contradictorias de sí mismo y de los demás.'],
+[1,2,1958,'Terapia conductual','Watson, Pavlov, Skinner, Joseph Wolpe','Skinner (1953); Wolpe, Psychotherapy by Reciprocal Inhibition (1958)','Las conductas se aprenden y se mantienen por asociaciones, consecuencias y contexto. Wolpe llevó esta base a la clínica con desensibilización sistemática y exposición. Hoy persisten la activación conductual, el reforzamiento, el entrenamiento en habilidades y la prevención de respuesta.'],
+[1,2,1962,'REBT','Albert Ellis','Reason and Emotion in Psychotherapy (1962)','Ellis plantea que el malestar no depende solo de los hechos, sino de creencias rígidas y absolutistas sobre ellos («debo», «es terrible»). La terapia las identifica, las cuestiona y las reemplaza por evaluaciones más flexibles. Es un antecedente directo de la TCC.'],
+[1,2,1977,'Aprendizaje social','Albert Bandura','Social Learning Theory (1977)','Bandura muestra que también aprendemos observando a otras personas. El modelado, las expectativas y la autoeficacia (la confianza en la propia capacidad de actuar) explican cómo se adquieren y cambian las conductas, y alimentaron el giro cognitivo de la TCC.'],
+[1,2,1979,'Terapia cognitivo-conductual','Aaron T. Beck; Rush, Shaw, Emery; Meichenbaum, Padesky','Cognitive Therapy and the Emotional Disorders (1976); Cognitive Therapy of Depression (1979)','Beck propone que pensamientos, emociones, conductas y respuestas corporales se influyen mutuamente. Se identifican patrones problemáticos y se ponen a prueba con reestructuración cognitiva, experimentos conductuales, exposición, tareas entre sesiones, resolución de problemas y prevención de recaídas.'],
+[1,3,1993,'DBT','Marsha Linehan','Cognitive-Behavioral Treatment of Borderline Personality Disorder (1993)','Combina aceptación y cambio para abordar desregulación emocional, conductas autolesivas y problemas interpersonales. Integra entrenamiento en habilidades con validación del sufrimiento, y fue desarrollada inicialmente para el trastorno límite de la personalidad.'],
+[1,3,1999,'ACT','Steven C. Hayes, Strosahl, Wilson','Acceptance and Commitment Therapy (1999; ed. revisada 2012)','No exige eliminar pensamientos y emociones difíciles: enseña a relacionarse con ellos de otro modo y a comprometerse con acciones coherentes con los valores personales. Pertenece a las terapias contextuales o de tercera ola.'],
+[1,3,2002,'MBCT','Zindel Segal, Mark Williams, John Teasdale','Mindfulness-Based Cognitive Therapy for Depression (2002)','Une elementos de la terapia cognitiva con prácticas de atención plena. Entrena a notar los pensamientos negativos como eventos mentales y no como hechos, y se diseñó sobre todo para reducir el riesgo de recaídas depresivas.'],
+[1,3,2003,'Terapia de esquemas','Jeffrey Young, Klosko, Weishaar','Schema Therapy: A Practitioner\'s Guide (2003)','Young plantea que necesidades emocionales no satisfechas en la infancia generan esquemas tempranos desadaptativos que se reactivan en la vida adulta. Se trabajan con técnicas cognitivas, conductuales, experienciales y con la relación terapéutica. Su ubicación como tercera ola varía según el autor.'],
+[2,4,1942,'Terapia centrada en la persona','Carl Rogers','Counseling and Psychotherapy (1942); Client-Centered Therapy (1951)','Rogers sostiene que el cambio se facilita con tres condiciones: empatía, congruencia y aceptación positiva incondicional. El terapeuta no impone interpretaciones, sino que acompaña la exploración de la experiencia de la persona, que tiende a crecer cuando se siente comprendida.'],
+[2,4,1946,'Logoterapia','Viktor Frankl','Man\'s Search for Meaning (1946)','Frankl sostiene que la búsqueda de sentido es una dimensión central de la existencia humana. La terapia explora cómo encontrar sentido incluso en circunstancias difíciles, y su obra más conocida nace de su experiencia en los campos de concentración nazis.'],
+[2,4,1951,'Terapia Gestalt','Fritz Perls, Laura Perls, Paul Goodman','Perls, Hefferline y Goodman, Gestalt Therapy (1951)','Busca aumentar la conciencia de la experiencia presente: emociones, cuerpo y modos de contacto con el entorno. Se trabaja con experimentos dentro de la sesión para integrar aspectos disociados de la experiencia y asumir responsabilidad personal.'],
+[2,4,1980,'Psicoterapia existencial','Rollo May, Irvin Yalom, Binswanger, Boss','May, Existence (1958); Yalom, Existential Psychotherapy (1980)','Con raíces filosóficas y desarrollo clínico en los años 50 y 60, aborda las grandes preocupaciones de la existencia: libertad y responsabilidad, finitud, aislamiento y sentido. La terapia ayuda a confrontarlas en lugar de evitarlas.'],
+[2,4,1996,'Terapia focalizada en las emociones','Leslie Greenberg; Sue Johnson (parejas)','Greenberg (2002); Johnson, The Practice of Emotionally Focused Marital Therapy (1996)','Las emociones contienen información y tendencias de acción; las desadaptativas se identifican, regulan y transforman mediante la experiencia terapéutica. La versión para parejas de Sue Johnson detecta ciclos negativos de interacción y trabaja necesidades de apego. Son modelos emparentados, no idénticos.'],
+[3,5,1967,'Palo Alto','Bateson, Don Jackson, Watzlawick, Weakland, Haley','Pragmatics of Human Communication (1967); Change (1974)','Entiende los problemas como parte de circuitos de comunicación e interacción. Muchas «soluciones intentadas» perpetúan el problema, así que cambiar el patrón de interacción importa más que buscar causas pasadas.'],
+[3,5,1973,'Terapias generacionales','Murray Bowen; Böszörményi-Nagy','Böszörményi-Nagy y Spark, Invisible Loyalties (1973); Bowen (1978)','Bowen estudia la diferenciación del self, los triángulos emocionales y la transmisión de patrones entre generaciones. La terapia contextual de Böszörményi-Nagy pone el foco en la confianza, la justicia relacional, las lealtades y la reciprocidad.'],
+[3,5,1974,'Estructural y estratégica','Salvador Minuchin; Jay Haley, Cloe Madanes','Minuchin, Families and Family Therapy (1974); Haley, Problem-Solving Therapy (1976)','Minuchin analiza subsistemas, límites, jerarquías y alianzas, y busca reorganizar estructuras familiares rígidas. La terapia estratégica de Haley y Madanes interviene sobre secuencias problemáticas con directivas orientadas a cambiar el patrón que sostiene el síntoma.'],
+[3,5,1978,'Escuela de Milán','Selvini Palazzoli, Boscolo, Cecchin, Prata','Paradox and Counterparadox (1978)','Trabaja con hipótesis sobre el sistema familiar, preguntas circulares y neutralidad del terapeuta, de modo que la familia pueda observar sus relaciones desde perspectivas distintas a las habituales.'],
+[3,5,1985,'Terapia centrada en soluciones','Steve de Shazer, Insoo Kim Berg','Keys to Solution in Brief Therapy (1985)','Se centra en metas concretas, excepciones al problema, recursos y pequeños cambios, más que en analizar las causas. Es una terapia breve y orientada al futuro.'],
+[3,5,1990,'Terapia narrativa','Michael White, David Epston','Narrative Means to Therapeutic Ends (1990)','Parte de que organizamos la experiencia en relatos. La persona no es el problema: este se externaliza y se desarrollan historias alternativas con más posibilidades de acción.'],
+[4,6,1933,'Terapias corporales','Wilhelm Reich, Lowen; Peter Levine, Pat Ogden','Reich, Character Analysis (1933); Levine, Waking the Tiger (1997); Ogden et al. (2006)','Reich propuso relaciones entre defensas psicológicas y tensión corporal, y Lowen las retomó en la bioenergética. Somatic Experiencing y la psicoterapia sensoriomotriz trabajan sensaciones y activación en el trauma. Su evidencia es más limitada que la de los tratamientos de primera línea: trabajar con el cuerpo no prueba eficacia por sí solo.'],
+[4,6,1988,'Exposición prolongada y CPT','Edna Foa; Patricia Resick','Foa et al. (2007); Resick, Monson y Chard (2017)','La exposición prolongada aborda el miedo y la evitación mediante exposición planificada a recuerdos y situaciones seguras que se evitan. La terapia de procesamiento cognitivo trabaja las creencias que mantienen el trauma: culpa, seguridad, confianza, poder y estima. Ambas son tratamientos cognitivo-conductuales.'],
+[4,6,1995,'EMDR','Francine Shapiro','Eye Movement Desensitization and Reprocessing (1995)','Tratamiento estructurado en el que se recuerdan aspectos del recuerdo traumático mientras se aplica estimulación bilateral, con fases de preparación, evaluación y reevaluación. No es una variante de la TCC ni de la tercera ola; las recomendaciones dependen de la condición y de las guías clínicas.'],
+[4,6,2006,'TF-CBT','Judith Cohen, Anthony Mannarino, Esther Deblinger','Treating Trauma and Traumatic Grief in Children and Adolescents (2006)','Desarrollada para niños, adolescentes y sus cuidadores. Combina componentes cognitivo-conductuales, procesamiento gradual del recuerdo traumático, habilidades de regulación y participación del cuidador cuando corresponde.'],
+[5,7,1934,'Psicodrama','Jacob L. Moreno','Who Shall Survive? (1934)','Explora conflictos y roles mediante dramatización, inversión de roles y escenificación de situaciones, habitualmente en grupo, para que la persona pueda ensayar otras respuestas.'],
+[5,7,1970,'Psicoterapia de grupo','Irvin D. Yalom','The Theory and Practice of Group Psychotherapy (1970)','Usa la interacción grupal como medio de aprendizaje interpersonal, apoyo, pertenencia y cambio: el grupo se vuelve un espacio donde emergen y pueden transformarse los patrones relacionales de cada integrante.'],
+[5,7,1984,'Psicoterapia interpersonal (IPT)','Gerald Klerman, Myrna Weissman','Interpersonal Psychotherapy of Depression (1984)','Vincula los síntomas, sobre todo depresivos, con cuatro áreas: duelo, disputas interpersonales, transiciones de rol y dificultades para establecer relaciones. Es un tratamiento focalizado y de duración limitada.'],
+[5,7,1992,'Integración y eclecticismo','Lazarus, John Norcross, Marvin Goldfried','Norcross y Goldfried (eds.), Handbook of Psychotherapy Integration (1992)','El eclecticismo selecciona técnicas de distintas escuelas (Lazarus, terapia multimodal); la integración intenta articularlas desde una teoría coherente del cambio. «Integrativo» describe una orientación profesional amplia, no un tratamiento único y estandarizado.'],
+[5,7,1995,'Sistemas de Familia Interna (IFS)','Richard C. Schwartz','Internal Family Systems Therapy (1995)','Concibe la vida interna como un sistema de «partes» con funciones protectoras y un Self capaz de relacionarse con ellas con curiosidad y compasión. Es un modelo propio, no una rama del psicoanálisis ni de la terapia familiar sistémica.']];
+const Y=y=>46+(y-1890)*3.2;let s='';
+for(let y=1900;y<=2020;y+=20)s+=`<line x1="30" x2="395" y1="${Y(y)}" y2="${Y(y)}" stroke="currentColor" opacity=".12"/><text x="2" y="${Y(y)+4}" font-size="10" fill="currentColor" opacity=".55">${y}</text>`;
+L.forEach((l,i)=>s+=`<text x="${72+i*60}" y="22" font-size="9.5" text-anchor="middle" fill="${C[i]}" font-weight="600">${l}</text>`);
+const last={};D.forEach((d,i)=>{const l=d[0],y=d[2];let o=0;const p=last[l];if(p&&y-p.y<7)o=p.o?-p.o:9;last[l]={y,o};
+s+=`<circle class="dot" data-i="${i}" data-ch="${d[1]}" cx="${72+l*60+o}" cy="${Y(y)}" r="6" fill="${C[l]}" style="cursor:pointer;transition:opacity .3s"><title>${d[3]} (${y})</title></circle>`});
+tl.innerHTML=s;
+document.querySelectorAll('.cards').forEach(c=>{const ch=+c.dataset.ch;c.innerHTML=D.map((d,i)=>d[1]==ch?`<article class="t" id="s${i}" data-i="${i}" style="--c:${C[d[0]]}"><div class="y">${d[2]}</div><div><h3>${d[3]}</h3><div class="au">${d[4]}</div><p>${d[6]}</p><div class="wk">${d[5]}</div></div></article>`:'').join('')});
+tl.addEventListener('click',e=>{const d=e.target.closest('.dot');if(d)document.getElementById('s'+d.dataset.i).scrollIntoView({block:'center'})});
+const dots=[...document.querySelectorAll('.dot')];
+function act(i){dots.forEach((d,k)=>{const on=i==null?1:D[k][1]==D[i][1];d.style.opacity=i==null?.75:on?1:.15;d.setAttribute('r',k==i?11:6);d.setAttribute('stroke',k==i?'currentColor':'none');d.setAttribute('stroke-width',2)});cap.textContent=i==null?'Baja para comenzar':CAP[D[i][1]]+' · '+D[i][3]+' ('+D[i][2]+')'}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.t.on').forEach(x=>x.classList.remove('on'));e.target.classList.add('on');act(+e.target.dataset.i)}}),{rootMargin:'-42% 0px -42% 0px'});
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');io2.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.t').forEach(x=>{io.observe(x);io2.observe(x)});
+new IntersectionObserver(es=>{if(es[0].isIntersecting){document.querySelectorAll('.t.on').forEach(x=>x.classList.remove('on'));act(null)}},{threshold:.5}).observe(document.querySelector('.hero'));act(null);
+const T=['Psicoterapias',-1,
+['Psicoanálisis (Freud)',0,['Adler y Jung',0],['Psicología del Yo',0],['Relaciones objetales',0,['Poskleinianos',0],['MBT y TFP',0]],['Psicología del self',0],['Lacan',0],['Interpersonal y relacional',0]],
+['Conductismo',1,['Terapia conductual',1],['Aprendizaje social',1],['REBT',1],['TCC',1,['DBT',1],['ACT',1],['MBCT',1],['Esquemas',1],['PE y CPT',4],['TF-CBT',4]]],
+['Fenomenología y existencialismo',2,['Centrada en la persona',2,['EFT',2]],['Gestalt',2],['Existencial',2],['Logoterapia',2]],
+['Cibernética y Palo Alto',3,['Estructural y estratégica',3],['Milán',3],['Generacionales',3],['Soluciones',3],['Narrativa',3]],
+['Terapias corporales',4],['EMDR',4],['IPT',5],['Psicodrama',5],['Terapia de grupo',5],['IFS',5],['Integración',5]];
+let n=0;const lay=(t,d)=>{const k=t.slice(2).map(c=>lay(c,d+1));return{t,d,k,y:k.length?(k[0].y+k[k.length-1].y)/2:26+n++*25}};
+const R=lay(T,0);let o='',W=1000;
+const X=d=>14+d*205;
+(function dr(nd,p){const x=X(nd.d),y=nd.y,c=nd.t[1]<0?'currentColor':C[nd.t[1]];
+if(p)o+=`<path d="M${X(p.d)} ${p.y}C${X(p.d)+90} ${p.y} ${x-90} ${y} ${x} ${y}" fill="none" stroke="${c}" stroke-width="2" opacity=".6"/>`;
+nd.k.forEach(k=>dr(k,nd));
+o+=`<circle cx="${x}" cy="${y}" r="${nd.k.length?6:4.5}" fill="${c}"/><text x="${x+10}" y="${nd.k.length?y-9:y+4}" ${nd.k.length?'font-weight="600"':''}>${nd.t[0]}</text>`})(R,null);
+tr.setAttribute('viewBox',`0 0 ${W} ${26+n*25}`);tr.innerHTML=o;
+</script></body></html>
